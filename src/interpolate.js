@@ -27,13 +27,16 @@ export default function(fromShape, toShape, { maxSegmentLength = 10, string = tr
 export function interpolateRing(fromRing, toRing, string) {
   let diff;
 
-  diff = fromRing.length - toRing.length;
+  // diff = fromRing.length - toRing.length;
 
   // TODO bisect and add points in one step?
-  addPoints(fromRing, diff < 0 ? diff * -1 : 0);
-  addPoints(toRing, diff > 0 ? diff : 0);
+  // addPoints(fromRing, diff < 0 ? diff * -1 : 0);
+  // addPoints(toRing, diff > 0 ? diff : 0);
 
   rotate(fromRing, toRing);
+
+
+
 
   return interpolatePoints(fromRing, toRing, string);
 }
